@@ -2,19 +2,13 @@ import React from "react";
 import ExpandCollapse from "react-expand-collapse";
 import "../css/PODCard.css";
 
-
 export default function PODCard(props){
 
-  console.log(props)
-
-
     return(
-
       <div 
         className="pod" 
         style={{backgroundImage: `url(${props.url})`}}
       >
-        {/* <img src={props.url} alt="test" /> */}
         <div className="card"> 
           <div key={props.date}>
             <h2>Picture of the Day: {props.title}</h2>
@@ -45,8 +39,7 @@ export default function PODCard(props){
        </div>
       
       </div>
-      </div>
-      
-    );
+    </div>
+  );
 }
 

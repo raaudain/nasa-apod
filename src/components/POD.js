@@ -4,9 +4,7 @@ import Header from "./Header";
 import axios from "axios";
 import moment from "moment";
 
-
-export default function POD(){
-    
+export default function POD(){  
     const [pod, setPod] = useState([]);
     const [date, setDate] = useState(new Date());
 
@@ -19,14 +17,12 @@ export default function POD(){
             .then(res => {
                 // Sets the array of objects from the API
                 const apod = res.data;
-                console.log(apod)
                 setPod(apod);
             })
             .catch(err => console.log(`${err.response}`));
     },[date])
     
     return(
-
         <div>
             <Header 
                 date={date} 
@@ -41,8 +37,7 @@ export default function POD(){
                 copyright={pod.copyright} 
                 date={moment(pod.date).format("M/D/YYYY")} 
                 explanation={pod.explanation} 
-            />
-            
+            />   
         </div>
     );
 }

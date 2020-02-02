@@ -18,21 +18,16 @@ export default function Header(props){
                         <div>NASA Astronomy</div>
                     </div>
                     
-
                     <div className="date-picker">
                         <span>Choose a date:</span>
                         <DatePicker 
                             selected={props.date} 
                             onChange={changeDate}
                             peekNextMonth
-                            // showMonthDropdown
-                            // showYearDropdown
                             dropdownMode="select"
                             dateFormat="MMMM d, yyyy"
                         />
                     </div>
-                
             </div>
-        
     )
 }
