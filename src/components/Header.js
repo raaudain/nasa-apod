@@ -24,6 +24,8 @@ export default function Header(props){
                     peekNextMonth
                     dropdownMode="select"
                     dateFormat="MMMM d, yyyy"
+                    maxDate={new Date()}
+                    minDate={new Date("June 16, 1995")}
                 />
             </div>
         </div>

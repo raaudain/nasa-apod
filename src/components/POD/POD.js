@@ -18,6 +18,7 @@ export default function POD(){
             .then(res => {
                 // Sets the array of objects from the API
                 const apod = res.data;
+                console.log(res.data)
                 setPod(apod);
             })
             .catch(err => console.log(`${err.response}`));
@@ -37,8 +38,9 @@ export default function POD(){
                 url={pod.url} 
                 copyright={pod.copyright} 
                 date={moment(pod.date).format("M/D/YYYY")} 
-                explanation={pod.explanation} 
-            />   
+                explanation={pod.explanation}
+                media_type={pod.media_type}
+            />
         </div>
     );
 }
