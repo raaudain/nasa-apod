@@ -1,6 +1,7 @@
 import React from "react";
 import "./css/App.css";
-import POD from "./components/POD";
+import POD from "./components/POD/POD";
+
 
 function App(){
   return (

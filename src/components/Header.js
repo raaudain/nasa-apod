@@ -9,25 +9,23 @@ export default function Header(props){
         props.setDate(e)
     };
 
-    return(
-        
-            <div className="header">
-
-                    <div className="nasa">
-                        <i className="fas fa-user-astronaut"></i>
-                        <div>NASA Astronomy</div>
-                    </div>
-                    
-                    <div className="date-picker">
-                        <span>Choose a date:</span>
-                        <DatePicker 
-                            selected={props.date} 
-                            onChange={changeDate}
-                            peekNextMonth
-                            dropdownMode="select"
-                            dateFormat="MMMM d, yyyy"
-                        />
-                    </div>
+    return( 
+        <div className="header">
+            <div className="nasa">
+                <i className="fas fa-user-astronaut"></i>
+                <div>NASA Astronomy</div>
             </div>
-    )
+            
+            <div className="date-picker">
+                <span>Choose a date:</span>
+                <DatePicker 
+                    selected={props.date} 
+                    onChange={changeDate}
+                    peekNextMonth
+                    dropdownMode="select"
+                    dateFormat="MMMM d, yyyy"
+                />
+            </div>
+        </div>
+    );
 }
