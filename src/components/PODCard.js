@@ -5,7 +5,7 @@ import "../css/PODCard.css";
 export default function PODCard(props){
 
   const isCreditTrue = props.copyright ? `Credit: ${props.copyright}` : null;
-  console.log(props)
+
   const videoIsTrue = <div className="vod">
                         <iframe
                           title={props.title}
