@@ -18,7 +18,6 @@ export default function POD(){
             .then(res => {
                 // Sets the array of objects from the API
                 const apod = res.data;
-                console.log(res.data)
                 setPod(apod);
             })
             .catch(err => console.log(`${err.response}`));

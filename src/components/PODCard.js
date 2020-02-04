@@ -11,7 +11,7 @@ export default function PODCard(props){
                           title={props.title}
                           src={props.url}
                           frameBorder="0"
-                          />
+                        />
                         <div className="vod-card"> 
                           <div key={props.date}>
                             
@@ -68,7 +68,7 @@ export default function PODCard(props){
                               </div>
                             </ExpandCollapse>
                             
-                        </div>
+                          </div>
                         
                         </div>
                       </div>
