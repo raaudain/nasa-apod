@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import PODCard from "./PODCard";
-import Header from "../Header";
+import Header from "./Header";
 import axios from "axios";
 import moment from "moment";
 
