@@ -1,6 +1,5 @@
 import React from "react";
 import ExpandCollapse from "react-expand-collapse";
-import "../css/PODCard.css";
 
 export default function PODCard(props) {
   const isCreditTrue = props.copyright ? `Credit: ${props.copyright}` : null;
