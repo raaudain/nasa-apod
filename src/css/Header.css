@@ -36,7 +36,28 @@ a {
 }
 
 .date-picker span {
-  font-size: 1.4rem;
   padding-right: 10px;
   color: #000000;
+}
+
+@media (max-width: 800px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 135px;
+  }
+
+  .nasa {
+    width: 402px;
+    margin-top: 20px;
+    font-size: 3.1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .date-picker {
+    margin: 20px 0;
+    width: 300px;
+  }
 }
