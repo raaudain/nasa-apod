@@ -9,10 +9,12 @@ export default function Header(props) {
 
   return (
     <div className="header">
-      <div className="nasa">
-        <i className="fas fa-user-astronaut"></i>
-        <div>NASA Astronomy</div>
-      </div>
+      <a href="/">
+        <div className="nasa">
+          <i className="fas fa-user-astronaut"></i>
+          <div>NASA Astronomy</div>
+        </div>
+      </a>
 
       <div className="date-picker">
         <span>Choose a date:</span>
