@@ -36,6 +36,7 @@ a {
 }
 
 .date-picker span {
+  font-size: 1.4rem;
   padding-right: 10px;
   color: #000000;
 }
