@@ -24,7 +24,7 @@ export default function POD() {
   }, [date]);
 
   return (
-    <div>
+    <>
       <Header date={date} setDate={setDate} />
       {!pod.url ? (
         <Loading />
@@ -40,6 +40,6 @@ export default function POD() {
           media_type={pod.media_type}
         />
       )}
-    </div>
+    </>
   );
 }
