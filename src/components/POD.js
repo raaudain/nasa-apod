@@ -17,7 +17,6 @@ export default function POD() {
       .get(`https://api.nasa.gov/planetary/apod?api_key=${key}&date=${newDate}`)
       .then((res) => {
         // Sets the array of objects from the API
-        console.log(res);
         const apod = res.data;
         setPod(apod);
       })
