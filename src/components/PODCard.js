@@ -4,7 +4,7 @@ import ExpandCollapse from "react-expand-collapse";
 export default function PODCard(props) {
   const isCreditTrue = props.copyright ? `Credit: ${props.copyright}` : null;
 
-  const videoIsTrue = (
+  const isVideoTrue = (
     <div className="vod">
       <iframe title={props.title} src={props.url} frameBorder="0" />
       <div className="vod-card">
@@ -26,7 +26,7 @@ export default function PODCard(props) {
     </div>
   );
 
-  const imageIsTrue = (
+  const isImageTrue = (
     <div className="pod" style={{ backgroundImage: `url(${props.url})` }}>
       <div className="pod-card">
         <div key={props.date}>
@@ -60,7 +60,7 @@ export default function PODCard(props) {
     </div>
   );
 
-  const display = props.media_type === "video" ? videoIsTrue : imageIsTrue;
+  const display = props.media_type === "video" ? isVideoTrue : isImageTrue;
 
   return <>{display}</>;
 }
