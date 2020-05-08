@@ -3,8 +3,8 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 export default function Header(props) {
-  const changeDate = e => {
-    props.setDate(e);
+  const changeDate = event => {
+    props.setDate(event);
   };
 
   return (
