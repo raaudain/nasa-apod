@@ -25,7 +25,10 @@ export default function POD() {
 
   return (
     <>
-      <Header date={date} setDate={setDate} />
+      <Header 
+        date={date} 
+        setDate={setDate} 
+      />
       {!pod.url ? (
         <Loading />
       ) : (
