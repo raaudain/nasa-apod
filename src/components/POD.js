@@ -10,7 +10,7 @@ export default function POD() {
   const [date, setDate] = useState(new Date());
 
   useEffect(() => {
-    const key = "OtzHcO999QiozRF5WdhggeWhhMjwAXr3Whff1daa";
+    const key = process.env.REACT_APP_NASA_API_KEY;
     const newDate = moment(date).format("YYYY-MM-DD");
 
     axios
