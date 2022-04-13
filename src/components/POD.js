@@ -23,48 +23,6 @@ export default function POD() {
       .catch((err) => console.error(err));
   }, [date]);
 
-  let count = 1;
-  // June 16, 1995
-  function get() {
-    // while (prevDate) {
-      
-    // }
-    const key = process.env.REACT_APP_NASA_API_KEY;
-    let count = 1;
-    const test = []
-    let prevDate = moment(date).subtract(count, "days").format("YYYY-MM-DD");
-
-    axios
-      .get(`https://api.nasa.gov/planetary/apod?api_key=${key}&date=${prevDate}`)
-      .then((res) => {
-          console.log("hey", count, prevDate)
-      })
-
-    count++;
-  };
-
-  useEffect(() => {
-    const key = process.env.REACT_APP_NASA_API_KEY;
-    let prevDate = moment(date).subtract(count, "days").format("YYYY-MM-DD");
-
-    axios
-      .get(`https://api.nasa.gov/planetary/apod?api_key=${key}&date=${prevDate}`)
-      .then((res) => {
-        while (prevDate) {
-          if (prevDate === "1995-06-15") {
-            console.log("the end")
-            return;
-          }
-          else {
-            get()
-          }
-        }
-        
-        
-      })
-      .catch((err) => console.error(err))
-  })
-
   return (
     <>
       <Header date={date} setDate={setDate} />
