@@ -4,17 +4,23 @@ import Header from "./Header";
 import Loading from "./Loading";
 import axios from "axios";
 import moment from "moment";
+import { todaysPic } from "../api";
 
 export default function POD() {
   const [pod, setPod] = useState({});
   const [date, setDate] = useState(new Date());
 
+  todaysPic((e) => {
+    console.log(e)
+  })
+
   useEffect(() => {
     const newDate = moment(date).format("YYYY-MM-DD");
     const key = process.env.REACT_APP_NASA_API_KEY;
+    const url = `https://api.nasa.gov/planetary/apod?api_key=${key}&date=${newDate}`
 
     axios
-      .get(`https://api.nasa.gov/planetary/apod?api_key=${key}&date=${newDate}`)
+      .get(url)
       .then((res) => {
         // Sets the array of objects from the API
         const apod = res.data;

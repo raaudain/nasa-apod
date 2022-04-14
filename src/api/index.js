@@ -9,7 +9,7 @@ export const todaysPic = async () => {
   
     try {
       const res = await axios.get(`${url}`);
-    //   console.log(res.data)
+      console.log(res.data)
     //   res.data.forEach((e) => {
     //     if (e.country !== "US") {
     //       const modified = {
